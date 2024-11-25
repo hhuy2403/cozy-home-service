@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "note": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "landlordId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "serviceId"
+    },
+    "price": {
+      "type": "integer"
+    }
+  }
+}

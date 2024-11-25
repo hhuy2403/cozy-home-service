@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landlord_infos",
+  "info": {
+    "singularName": "landlord-info",
+    "pluralName": "landlord-infos",
+    "displayName": "LandlordInfo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "landlordInfoID"
+    },
+    "personalInfo": {
+      "type": "json"
+    },
+    "utilityRates": {
+      "type": "json"
+    },
+    "paymentSettings": {
+      "type": "json"
+    },
+    "city": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "ward": {
+      "type": "string"
+    }
+  }
+}

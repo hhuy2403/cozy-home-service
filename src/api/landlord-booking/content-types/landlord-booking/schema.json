@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landlord_bookings",
+  "info": {
+    "singularName": "landlord-booking",
+    "pluralName": "landlord-bookings",
+    "displayName": "LandlordBooking",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "houseName": {
+      "type": "string"
+    },
+    "roomNumber": {
+      "type": "string"
+    },
+    "customerName": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "bookingDate": {
+      "type": "string"
+    },
+    "expectedArrival": {
+      "type": "string"
+    },
+    "deposit": {
+      "type": "integer"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "customStatus": {
+      "type": "string"
+    },
+    "houseId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::home.home",
+      "inversedBy": "landlordBookingId"
+    },
+    "roomId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::room.room",
+      "inversedBy": "landlordBokingId"
+    }
+  }
+}

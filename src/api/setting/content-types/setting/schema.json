@@ -1,0 +1,93 @@
+{
+  "kind": "collectionType",
+  "collectionName": "settings",
+  "info": {
+    "singularName": "setting",
+    "pluralName": "settings",
+    "displayName": "Setting"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "systemName": {
+      "type": "string"
+    },
+    "contactEmail": {
+      "type": "string"
+    },
+    "supportPhone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaKeywords": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "string"
+    },
+    "depositPolicy": {
+      "type": "string"
+    },
+    "refundPolicy": {
+      "type": "string"
+    },
+    "termsOfService": {
+      "type": "string"
+    },
+    "privacyPolicy": {
+      "type": "string"
+    },
+    "emailNotification": {
+      "type": "boolean"
+    },
+    "smsNotification": {
+      "type": "boolean"
+    },
+    "smtpHost": {
+      "type": "string"
+    },
+    "smtpPort": {
+      "type": "integer"
+    },
+    "smtpUsername": {
+      "type": "string"
+    },
+    "smtpPassword": {
+      "type": "string"
+    },
+    "smsApiKey": {
+      "type": "string"
+    },
+    "smsSecretKey": {
+      "type": "string"
+    },
+    "maxStorageSize": {
+      "type": "integer"
+    },
+    "allowedFileTypes": {
+      "type": "string"
+    },
+    "cloudStorage": {
+      "type": "string"
+    },
+    "s3Region": {
+      "type": "string"
+    },
+    "s3Bucket": {
+      "type": "string"
+    },
+    "s3AccessKey": {
+      "type": "string"
+    },
+    "s3SecretKey": {
+      "type": "string"
+    }
+  }
+}

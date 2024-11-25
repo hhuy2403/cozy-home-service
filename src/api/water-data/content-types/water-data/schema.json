@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "water_datas",
+  "info": {
+    "singularName": "water-data",
+    "pluralName": "water-datas",
+    "displayName": "WaterData"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "monthYear": {
+      "type": "string"
+    },
+    "oldWaterIndex": {
+      "type": "integer"
+    },
+    "newWaterIndex": {
+      "type": "integer"
+    },
+    "waterUsage": {
+      "type": "integer"
+    },
+    "isPaid": {
+      "type": "boolean"
+    },
+    "roomId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::room.room",
+      "inversedBy": "waterDataId"
+    },
+    "houseId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::home.home",
+      "inversedBy": "waterDataId"
+    }
+  }
+}

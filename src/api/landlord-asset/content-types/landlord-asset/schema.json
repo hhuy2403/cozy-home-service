@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landlord_assets",
+  "info": {
+    "singularName": "landlord-asset",
+    "pluralName": "landlord-assets",
+    "displayName": "LandlordAsset",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "assetCode": {
+      "type": "string"
+    },
+    "assetName": {
+      "type": "string"
+    },
+    "houseId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::home.home",
+      "inversedBy": "landlordAssetsId"
+    },
+    "houseName": {
+      "type": "string"
+    },
+    "roomNumber": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "purchaseDate": {
+      "type": "string"
+    },
+    "usageDate": {
+      "type": "string"
+    },
+    "disposalDate": {
+      "type": "string"
+    },
+    "isDisposed": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "Customstatus": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "landlordAssetsId"
+    },
+    "landlordId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "landlordAssets"
+    }
+  }
+}

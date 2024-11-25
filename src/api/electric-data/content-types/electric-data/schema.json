@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "electric_datas",
+  "info": {
+    "singularName": "electric-data",
+    "pluralName": "electric-datas",
+    "displayName": "ElectricData"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "monthYear": {
+      "type": "string"
+    },
+    "oldElectricIndex": {
+      "type": "integer"
+    },
+    "newElectricIndex": {
+      "type": "integer"
+    },
+    "electricUsage": {
+      "type": "integer"
+    },
+    "isPaid": {
+      "type": "boolean"
+    },
+    "roomId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::room.room",
+      "inversedBy": "electricDataId"
+    },
+    "houseId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::home.home",
+      "inversedBy": "electricdataId"
+    }
+  }
+}

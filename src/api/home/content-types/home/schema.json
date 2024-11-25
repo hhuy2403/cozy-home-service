@@ -1,0 +1,91 @@
+{
+  "kind": "collectionType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "ward": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "landlordId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "homeId"
+    },
+    "roomId": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::room.room",
+      "mappedBy": "houseId"
+    },
+    "electricdataId": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::electric-data.electric-data",
+      "mappedBy": "houseId"
+    },
+    "waterDataId": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::water-data.water-data",
+      "mappedBy": "houseId"
+    },
+    "other_fees": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::other-fee.other-fee",
+      "mappedBy": "houseId"
+    },
+    "landlordAssetsId": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::landlord-asset.landlord-asset",
+      "mappedBy": "houseId"
+    },
+    "contractId": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::contract.contract",
+      "mappedBy": "houseId"
+    },
+    "customers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::customer.customer",
+      "mappedBy": "house"
+    },
+    "landlordBookingId": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::landlord-booking.landlord-booking",
+      "mappedBy": "houseId"
+    },
+    "billID": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bill.bill",
+      "mappedBy": "homeId"
+    }
+  }
+}

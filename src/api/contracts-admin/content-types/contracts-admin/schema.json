@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contracts_admins",
+  "info": {
+    "singularName": "contracts-admin",
+    "pluralName": "contracts-admins",
+    "displayName": "ContractsAdmin"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "partner": {
+      "type": "string"
+    },
+    "terms": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "debts",
+  "info": {
+    "singularName": "debt",
+    "pluralName": "debts",
+    "displayName": "Debt"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "biginteger"
+    },
+    "debtStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Chưa Thanh Toán",
+        "Đã Thanh Toán"
+      ]
+    }
+  }
+}

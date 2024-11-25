@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "other_fees",
+  "info": {
+    "singularName": "other-fee",
+    "pluralName": "other-fees",
+    "displayName": "OtherFee"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "houseId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::home.home",
+      "inversedBy": "other_fees"
+    },
+    "roomNumber": {
+      "type": "string"
+    },
+    "monthYear": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "text"
+    },
+    "landlordId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "otherFeeID"
+    }
+  }
+}

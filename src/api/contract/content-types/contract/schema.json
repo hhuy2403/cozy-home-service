@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contracts",
+  "info": {
+    "singularName": "contract",
+    "pluralName": "contracts",
+    "displayName": "Contract"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "landlordName": {
+      "type": "string"
+    },
+    "landlordAddress": {
+      "type": "string"
+    },
+    "landlordPhone": {
+      "type": "string"
+    },
+    "tenantName": {
+      "type": "string"
+    },
+    "tenantIdentityCard": {
+      "type": "string"
+    },
+    "tenantPhone": {
+      "type": "string"
+    },
+    "tenantAddress": {
+      "type": "string"
+    },
+    "houseName": {
+      "type": "string"
+    },
+    "roomNumber": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "rentalCost": {
+      "type": "string"
+    },
+    "deposit": {
+      "type": "string"
+    },
+    "terms": {
+      "type": "string"
+    },
+    "customStatus": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "contractId"
+    },
+    "houseId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::home.home",
+      "inversedBy": "contractId"
+    },
+    "maintenanceId": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::maintenance.maintenance",
+      "mappedBy": "contractId"
+    }
+  }
+}

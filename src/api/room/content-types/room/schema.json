@@ -1,0 +1,95 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rooms",
+  "info": {
+    "singularName": "room",
+    "pluralName": "rooms",
+    "displayName": "Room",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "roomNumber": {
+      "type": "string"
+    },
+    "houseId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::home.home",
+      "inversedBy": "roomId"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "length": {
+      "type": "integer"
+    },
+    "width": {
+      "type": "integer"
+    },
+    "maxPeople": {
+      "type": "integer"
+    },
+    "rentableToMale": {
+      "type": "boolean"
+    },
+    "rentableToFemale": {
+      "type": "boolean",
+      "default": false
+    },
+    "description": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "isRented": {
+      "type": "boolean",
+      "default": false
+    },
+    "isPaid": {
+      "type": "boolean",
+      "default": false
+    },
+    "electricDataId": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::electric-data.electric-data",
+      "mappedBy": "roomId"
+    },
+    "waterDataId": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::water-data.water-data",
+      "mappedBy": "roomId"
+    },
+    "customers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::customer.customer",
+      "mappedBy": "rooms"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "bills": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bill.bill",
+      "mappedBy": "room"
+    },
+    "hasBooking": {
+      "type": "boolean",
+      "default": false
+    },
+    "landlordBokingId": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::landlord-booking.landlord-booking",
+      "mappedBy": "roomId"
+    }
+  }
+}

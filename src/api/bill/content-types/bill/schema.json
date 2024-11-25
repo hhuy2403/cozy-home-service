@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bills",
+  "info": {
+    "singularName": "bill",
+    "pluralName": "bills",
+    "displayName": "Bill",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "month": {
+      "type": "string"
+    },
+    "houseName": {
+      "type": "string"
+    },
+    "roomNumber": {
+      "type": "string"
+    },
+    "customerName": {
+      "type": "string"
+    },
+    "customerPhone": {
+      "type": "string"
+    },
+    "customerEmail": {
+      "type": "string"
+    },
+    "totalAmount": {
+      "type": "integer"
+    },
+    "paidAmount": {
+      "type": "integer"
+    },
+    "remainingAmount": {
+      "type": "integer"
+    },
+    "customStatus": {
+      "type": "string"
+    },
+    "homeId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::home.home",
+      "inversedBy": "billID"
+    },
+    "customerId": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::customer.customer",
+      "inversedBy": "billID"
+    },
+    "room": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::room.room",
+      "inversedBy": "bills"
+    },
+    "roomId": {
+      "type": "string"
+    },
+    "houseId": {
+      "type": "string"
+    },
+    "billDetails": {
+      "type": "json"
+    },
+    "landlordId": {
+      "type": "string"
+    },
+    "paymentHistory": {
+      "type": "json"
+    }
+  }
+}
